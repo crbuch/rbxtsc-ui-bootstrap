@@ -1,10 +1,69 @@
-# A Roblox-Typescript RoactJSX UI Application Bundle
+# Roblox RoactJSX UI Bundle Starter
 
-Edit the files in /src
+A minimal, opinionated starter template for building Roblox UI applications using **TypeScript**, **Roact**, and **JSX**.  
+Everything compiles into a single `bundle.lua` script for easy integration into Roblox Studio.
 
-The entry point is in /src/client/main.client.tsx
+## ✨ Features
 
-To compile the script bundle, you need Rojo, Wax, and Darklua CLI to be installed. All of which can be found in the /bin directory
-Compile the bundle with "npm run bundle"
+- ⚡ Written in **TypeScript** with **JSX** syntax
+- 🎨 UI powered by **Roact**
+- 📦 Compiles into a single Lua file (`bundle.lua`)
+- 🔧 Uses exact versions of **Rojo**, **Wax**, and **Darklua**
+- 🚀 Quick setup and bundling with `npm` scripts
 
-Serve the bundled script via Rojo with "rojo serve ./bundle", or run "npm run serve-rojo"
+## 📁 Project Structure
+/
+├── src/ # Your UI code goes here
+│ └── client/
+│ └── main.client.tsx # Entry point
+├── bin/ # CLI binaries (Rojo, Wax, Darklua)
+├── bundle/ # Output folder for bundled script
+├── package.json
+└── README.md
+
+## 🛠 Prerequisites
+
+Ensure you have the following installed or included in `/bin`:
+
+- [Rojo](https://rojo.space/)
+- [Wax](https://github.com/roblox-ts/wax)
+- [Darklua](https://github.com/seaofvoices/darklua)
+- Node.js + npm
+
+## 🚧 Usage
+
+### 1. Edit your UI in `/src/client/main.client.tsx`
+
+Use TypeScript and JSX to build Roact components.
+
+### 2. Compile the bundle
+
+```bash
+npm run bundle
+```
+
+This outputs bundle.client.luau to the /bundle/out directory.
+
+### 3. Serve to Roblox Studio
+
+Start Rojo
+
+```bash
+rojo serve ./bundle
+```
+
+Or use the included npm script:
+
+```bash
+npm run serve-rojo
+```
+
+### 🧩 Why This Exists
+This is not a framework. Just a ready-to-go environment that:
+
+Uses very specific versions of roblox-ts, roact, wax, and darklua
+
+Helps avoid setup quirks and version mismatches
+
+Supports JSX syntax out of the box
+
