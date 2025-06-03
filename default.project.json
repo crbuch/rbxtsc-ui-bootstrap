@@ -1,0 +1,26 @@
+{
+	"name": "roblox-ts-ui",
+	"globIgnorePaths": ["**/package.json", "**/tsconfig.json", "src/types", "src/types/**"],
+	"tree": {
+		"$className": "Folder",
+
+		"StarterPlayer": {
+			"$className": "Folder",
+			"StarterPlayerScripts": {
+				"$className": "Folder",
+				"TS": {
+					"$path": "out/"
+				}
+			},
+            "rbxts_include": {
+				"$path": "include",
+				"node_modules": {
+					"$className": "Folder",
+					"@rbxts": {
+						"$path": "node_modules/@rbxts"
+					}
+				}
+			}
+		}
+	}
+}

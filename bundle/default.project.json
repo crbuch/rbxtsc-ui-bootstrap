@@ -1,0 +1,15 @@
+{
+	"name": "roblox-ts-bundle",
+	"tree": {
+		"$className": "DataModel",
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"TS": {
+					"$path": "./out"
+				}
+			}
+		}
+	}
+}
