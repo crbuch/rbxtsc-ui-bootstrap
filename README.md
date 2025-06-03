@@ -12,6 +12,7 @@ Everything compiles into a single `bundle.lua` script for easy integration into 
 - 🚀 Quick setup and bundling with `npm` scripts
 
 ## 📁 Project Structure
+```bash
 /
 ├── src/ # Your UI code goes here
 │ └── client/
@@ -20,19 +21,20 @@ Everything compiles into a single `bundle.lua` script for easy integration into 
 ├── bundle/ # Output folder for bundled script
 ├── package.json
 └── README.md
+```
 
 ## 🛠 Prerequisites
 
-Ensure you have the following installed or included in `/bin`:
+Ensure you have the following installed or included from `/bin`:
 
 - [Rojo](https://rojo.space/)
-- [Wax](https://github.com/roblox-ts/wax)
+- [Wax](https://github.com/latte-soft/wax)
 - [Darklua](https://github.com/seaofvoices/darklua)
 - Node.js + npm
 
 ## 🚧 Usage
 
-### 1. Edit your UI in `/src/client/main.client.tsx`
+### 1. Edit your UI in `/src/app/page.tsx`
 
 Use TypeScript and JSX to build Roact components.
 
