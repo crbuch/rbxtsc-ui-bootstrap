@@ -742,49 +742,50 @@ local function f(g)return function(h)g.hookCounter+=1 local i=g.hookCounter if g
 values[i]==nil then g.values[i]={value=h}end return g.values[i]end end return f end)()end,[84]=function()local b,c,d=a(
 84)local e return(function(...)local function f(g,h)local i=0 for j,k in pairs(g)do i+=1 if k~=h[j]then return true end
 end for j in pairs(h)do i-=1 end if i~=0 then return true end return false end return f end)()end},{{1,1,{'roblox-ts-ui'
-},{{2,1,{'StarterPlayer'},{{20,1,{'rbxts_include'},{{21,2,{'Promise'}},{23,1,{'node_modules'},{{24,1,{'@rbxts'},{{85,1,{
-'types'},{{86,1,{'include'},{{87,1,{'generated'}}}}}},{74,1,{'roact-hooks'},{{75,2,{'src'},{{83,2,{'createUseValue'}},{
-77,2,{'createUseCallback'}},{84,2,{'dependenciesDifferent'}},{79,2,{'createUseEffect'}},{82,2,{'createUseState'}},{76,2,
-{'createUseBinding'}},{78,2,{'createUseContext'}},{80,2,{'createUseMemo'}},{81,2,{'createUseReducer'}}}}}},{25,1,{
-'compiler-types'},{{26,1,{'types'}}}},{66,1,{'roact-hooked'},{{67,2,{'src'},{{68,2,{'NoYield'}},{72,2,{'pureComponent'}}
-,{73,2,{'withHookDetection'}},{70,2,{'hoc'}},{71,2,{'hooks'}},{69,2,{'Roact'}}}}}},{27,1,{'roact'},{{28,2,{'src'},{{50,2
-,{'assertDeepEqual'}},{58,2,{'createSignal'}},{47,2,{'SingleEventManager'}},{45,2,{'PureComponent'}},{54,2,{
-'createFragment'}},{60,2,{'forwardRef'}},{53,2,{'createElement'}},{33,2,{'ElementKind'}},{62,2,{'internalAssert'}},{48,2
-,{'Symbol'}},{63,2,{'invalidSetStateMessages'}},{46,2,{'RobloxRenderer'}},{30,2,{'Component'}},{49,2,{'Type'}},{55,2,{
-'createReconciler'}},{32,2,{'Config'}},{61,2,{'getDefaultInstanceProperty'}},{31,2,{'ComponentLifecyclePhase'}},{57,2,{
-'createRef'}},{39,2,{'Portal'}},{38,2,{'NoopRenderer'}},{34,2,{'ElementUtils'}},{64,2,{'oneChild'}},{65,2,{'strict'}},{
-35,2,{'GlobalConfig'}},{59,2,{'createSpy'}},{29,2,{'Binding'}},{36,2,{'Logging'}},{40,1,{'PropMarkers'},{{43,2,{'Event'}
-},{44,2,{'Ref'}},{41,2,{'Change'}},{42,2,{'Children'}}}},{51,2,{'assign'}},{56,2,{'createReconcilerCompat'}},{37,2,{
-'None'}},{52,2,{'createContext'}}}}}}}}}},{22,2,{'RuntimeLib'}}}},{3,1,{'StarterPlayerScripts'},{{4,1,{'TS'},{{9,1,{
-'components'},{{10,2,{'menus'},{{11,2,{'SettingsMenu'}}}},{12,2,{'ui'},{{13,2,{'Checkbox'}},{15,2,{'ThrottleSlider'}},{
-14,2,{'NumberInput'}}}}}},{5,1,{'app'},{{6,2,{'page'}}}},{17,2,{'utils'},{{18,2,{'CarTools'}},{19,2,{'Services'}}}},{7,1
-,{'client'},{{8,4,{'main'}}}},{16,1,{'types'}}}}}}}}}}},'0.4.1','WaxRuntime',string,task,setmetatable,error,next,table,
-unpack,coroutine,script,type,require,pcall,tostring,tonumber,_VERSION local w,x,y,z,A,B,C=k.insert,k.remove,k.freeze or
-function(w)return w end,n.wrap,f.sub,f.match,f.gmatch if u and A(u,1,4)=='Lune'then local D,E=r(q,'@lune/task')if D and
-E then g=E end end local D=g and g.defer local E,F,G,H,I,J,K,L,M=D or function(E,...)z(E)(...)end,{[1]='Folder',[2]=
-'ModuleScript',[3]='Script',[4]='LocalScript',[5]='StringValue'},{},{},{},{},{},{},{}local N,O={GetFullName={{},function
-(N)local O,P=N.Name,N.Parent while P do O=P.Name..'.'..O P=P.Parent end return O end},GetChildren={{},function(N)local O
-={}for P in j,M[N]do w(O,P)end return O end},GetDescendants={{},function(N)local O={}for P in j,M[N]do w(O,P)for Q,R in
-j,P:GetDescendants()do w(O,R)end end return O end},FindFirstChild={{'string','boolean?'},function(N,O,P)local Q=M[N]for
-R in j,Q do if R.Name==O then return R end end if P then for R in j,Q do return R:FindFirstChild(O,true)end end end},
-FindFirstAncestor={{'string'},function(N,O)local P=N.Parent while P do if P.Name==O then return P end P=P.Parent end end
-},WaitForChild={{'string','number?'},function(N,O)return N:FindFirstChild(O)end}},{}for P,Q in j,N do local R,S,T=Q[1],Q
-[2],{}for U,V in j,R do local W,X=B(V,'^([^%?]+)(%??)')T[U]={W,X}end O[P]=function(U,...)if not M[U]then i(
-"Expected ':' not '.' calling member function "..P,2)end local V={...}for W,X in j,T do local Y=V[W]local Z,_,aa=p(Y),X[
-1],X[2]if Y==nil and not aa then i('Argument '..Y..' missing or nil',3)end if _~='any'and Z~=_ and not(Z=='nil'and aa)
-then i('Argument '..W..' expects type "'.._..'", got "'..Z..'"',2)end end return S(U,...)end end local function aa(P,Q,R
-)local S,T=(h({},{__mode='k'}))local function U(V)i(V..' is not a valid (virtual) member of '..P..' "'..Q..'"',3)end
-local function V(W)i('Unable to assign (virtual) property '..W..'. Property is read only',3)end local W,X={},{}X.
-__metatable=false X.__index=function(Y,Z)if Z=='ClassName'then return P elseif Z=='Name'then return Q elseif Z=='Parent'
-then return R elseif P=='StringValue'and Z=='Value'then return T else local _=O[Z]if _ then return _ end end for _ in j,
-S do if _.Name==Z then return _ end end U(Z)end X.__newindex=function(Y,Z,_)if Z=='ClassName'then V(Z)elseif Z=='Name'
-then Q=_ elseif Z=='Parent'then if _==W then return end if R~=nil then M[R][W]=nil end R=_ if _~=nil then M[_][W]=true
-end elseif P=='StringValue'and Z=='Value'then T=_ else U(Z)end end X.__tostring=function()return Q end h(W,X)M[W]=S if R
-~=nil then M[R][W]=true end return W end local function P(Q,R)local S,T,U,V=Q[1],Q[2],Q[3],Q[4]local W=F[T]local X=U and
-x(U,1)or W local Y=aa(W,X,R)G[S]=Y if U then for Z,_ in j,U do Y[Z]=_ end end if V then for Z,_ in j,V do P(_,Y)end end
-return Y end local Q=aa('Folder','['..e..']')for R,S in j,c do P(S,Q)end for R,S in j,b do local T=G[R]H[T]=S I[T]=R
-local U=T.ClassName if U=='LocalScript'or U=='Script'then w(K,T)end end local function R(S)local T,U=S.ClassName,J[S]if
-U and T=='ModuleScript'then return l(U)end local V=H[S]local function W(X)X=s(X)local Y,Z,_=S:GetFullName(),B(X,
+},{{2,1,{'StarterPlayer'},{{20,1,{'rbxts_include'},{{21,2,{'Promise'}},{22,2,{'RuntimeLib'}},{23,1,{'node_modules'},{{24
+,1,{'@rbxts'},{{66,1,{'roact-hooked'},{{67,2,{'src'},{{72,2,{'pureComponent'}},{73,2,{'withHookDetection'}},{71,2,{
+'hooks'}},{69,2,{'Roact'}},{68,2,{'NoYield'}},{70,2,{'hoc'}}}}}},{25,1,{'compiler-types'},{{26,1,{'types'}}}},{27,1,{
+'roact'},{{28,2,{'src'},{{61,2,{'getDefaultInstanceProperty'}},{33,2,{'ElementKind'}},{48,2,{'Symbol'}},{36,2,{'Logging'
+}},{45,2,{'PureComponent'}},{58,2,{'createSignal'}},{40,1,{'PropMarkers'},{{41,2,{'Change'}},{42,2,{'Children'}},{43,2,{
+'Event'}},{44,2,{'Ref'}}}},{62,2,{'internalAssert'}},{55,2,{'createReconciler'}},{38,2,{'NoopRenderer'}},{31,2,{
+'ComponentLifecyclePhase'}},{34,2,{'ElementUtils'}},{54,2,{'createFragment'}},{52,2,{'createContext'}},{35,2,{
+'GlobalConfig'}},{51,2,{'assign'}},{57,2,{'createRef'}},{30,2,{'Component'}},{59,2,{'createSpy'}},{50,2,{
+'assertDeepEqual'}},{29,2,{'Binding'}},{65,2,{'strict'}},{37,2,{'None'}},{64,2,{'oneChild'}},{53,2,{'createElement'}},{
+46,2,{'RobloxRenderer'}},{49,2,{'Type'}},{39,2,{'Portal'}},{47,2,{'SingleEventManager'}},{60,2,{'forwardRef'}},{32,2,{
+'Config'}},{56,2,{'createReconcilerCompat'}},{63,2,{'invalidSetStateMessages'}}}}}},{85,1,{'types'},{{86,1,{'include'},{
+{87,1,{'generated'}}}}}},{74,1,{'roact-hooks'},{{75,2,{'src'},{{80,2,{'createUseMemo'}},{83,2,{'createUseValue'}},{81,2,
+{'createUseReducer'}},{82,2,{'createUseState'}},{84,2,{'dependenciesDifferent'}},{79,2,{'createUseEffect'}},{78,2,{
+'createUseContext'}},{76,2,{'createUseBinding'}},{77,2,{'createUseCallback'}}}}}}}}}}}},{3,1,{'StarterPlayerScripts'},{{
+4,1,{'TS'},{{9,1,{'components'},{{12,2,{'ui'},{{14,2,{'NumberInput'}},{13,2,{'Checkbox'}},{15,2,{'ThrottleSlider'}}}},{
+10,2,{'menus'},{{11,2,{'SettingsMenu'}}}}}},{7,1,{'client'},{{8,4,{'main'}}}},{5,1,{'app'},{{6,2,{'page'}}}},{16,1,{
+'types'}},{17,2,{'utils'},{{19,2,{'Services'}},{18,2,{'CarTools'}}}}}}}}}}}}},'0.4.1','WaxRuntime',string,task,
+setmetatable,error,next,table,unpack,coroutine,script,type,require,pcall,tostring,tonumber,_VERSION local w,x,y,z,A,B,C=
+k.insert,k.remove,k.freeze or function(w)return w end,n.wrap,f.sub,f.match,f.gmatch if u and A(u,1,4)=='Lune'then local
+D,E=r(q,'@lune/task')if D and E then g=E end end local D=g and g.defer local E,F,G,H,I,J,K,L,M=D or function(E,...)z(E)(
+...)end,{[1]='Folder',[2]='ModuleScript',[3]='Script',[4]='LocalScript',[5]='StringValue'},{},{},{},{},{},{},{}local N,O
+={GetFullName={{},function(N)local O,P=N.Name,N.Parent while P do O=P.Name..'.'..O P=P.Parent end return O end},
+GetChildren={{},function(N)local O={}for P in j,M[N]do w(O,P)end return O end},GetDescendants={{},function(N)local O={}
+for P in j,M[N]do w(O,P)for Q,R in j,P:GetDescendants()do w(O,R)end end return O end},FindFirstChild={{'string',
+'boolean?'},function(N,O,P)local Q=M[N]for R in j,Q do if R.Name==O then return R end end if P then for R in j,Q do
+return R:FindFirstChild(O,true)end end end},FindFirstAncestor={{'string'},function(N,O)local P=N.Parent while P do if P.
+Name==O then return P end P=P.Parent end end},WaitForChild={{'string','number?'},function(N,O)return N:FindFirstChild(O)
+end}},{}for P,Q in j,N do local R,S,T=Q[1],Q[2],{}for U,V in j,R do local W,X=B(V,'^([^%?]+)(%??)')T[U]={W,X}end O[P]=
+function(U,...)if not M[U]then i("Expected ':' not '.' calling member function "..P,2)end local V={...}for W,X in j,T do
+local Y=V[W]local Z,_,aa=p(Y),X[1],X[2]if Y==nil and not aa then i('Argument '..Y..' missing or nil',3)end if _~='any'
+and Z~=_ and not(Z=='nil'and aa)then i('Argument '..W..' expects type "'.._..'", got "'..Z..'"',2)end end return S(U,...
+)end end local function aa(P,Q,R)local S,T=(h({},{__mode='k'}))local function U(V)i(V..
+' is not a valid (virtual) member of '..P..' "'..Q..'"',3)end local function V(W)i(
+'Unable to assign (virtual) property '..W..'. Property is read only',3)end local W,X={},{}X.__metatable=false X.__index=
+function(Y,Z)if Z=='ClassName'then return P elseif Z=='Name'then return Q elseif Z=='Parent'then return R elseif P==
+'StringValue'and Z=='Value'then return T else local _=O[Z]if _ then return _ end end for _ in j,S do if _.Name==Z then
+return _ end end U(Z)end X.__newindex=function(Y,Z,_)if Z=='ClassName'then V(Z)elseif Z=='Name'then Q=_ elseif Z==
+'Parent'then if _==W then return end if R~=nil then M[R][W]=nil end R=_ if _~=nil then M[_][W]=true end elseif P==
+'StringValue'and Z=='Value'then T=_ else U(Z)end end X.__tostring=function()return Q end h(W,X)M[W]=S if R~=nil then M[R
+][W]=true end return W end local function P(Q,R)local S,T,U,V=Q[1],Q[2],Q[3],Q[4]local W=F[T]local X=U and x(U,1)or W
+local Y=aa(W,X,R)G[S]=Y if U then for Z,_ in j,U do Y[Z]=_ end end if V then for Z,_ in j,V do P(_,Y)end end return Y
+end local Q=aa('Folder','['..e..']')for R,S in j,c do P(S,Q)end for R,S in j,b do local T=G[R]H[T]=S I[T]=R local U=T.
+ClassName if U=='LocalScript'or U=='Script'then w(K,T)end end local function R(S)local T,U=S.ClassName,J[S]if U and T==
+'ModuleScript'then return l(U)end local V=H[S]local function W(X)X=s(X)local Y,Z,_=S:GetFullName(),B(X,
 '[^:]+:(%d+): (.+)')if not Z or not v then return Y..':*: '..(_ or X)end Z=t(Z)local ab=I[S]local ac=v[ab]local ad=Z-ac+
 1 if ad<0 then ad='?'end return Y..':'..ad..': '.._ end if T=='LocalScript'or T=='Script'then local ab,ac=r(V)if not ab
 then i(W(ac),0)end else local ab={r(V)}local ac=x(ab,1)if not ac then local ad=x(ab,1)i(W(ad),0)end J[S]=ab return l(ab)

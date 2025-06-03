@@ -18,6 +18,7 @@ export const MainUI = withHooks(function () {
 	});
 	const [menuOpen, setMenuOpen] = useState(false);
 
+	
 	// Keyboard input
 	useEffect(() => {
 		const uis = game.GetService("UserInputService");

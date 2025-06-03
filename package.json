@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx rbxtsc",
     "watch": "npx rbxtsc -w",
-    "bundle":"npx rbxtsc && wax bundle input=./default.project.json output=./bundle/bundle.client.luau minify=true",
+    "bundle":"npx rbxtsc && wax bundle input=./default.project.json output=./bundle/out/bundle.client.luau minify=true",
     "serve-rojo":"rojo serve ./bundle  --address 0.0.0.0"
   },
   "keywords": [],
