@@ -4,11 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-  "build": "npx rbxtsc",
-  "watch": "npx rbxtsc -w",
-  "bundle": "node ./run-task.js bundle",
-  "serve-rojo": "node ./run-task.js serve-rojo"
-},
+		"build": "npx rbxtsc",
+		"watch": "npx rbxtsc -w",
+		"bundle": "node ./run-task.js bundle",
+		"serve-rojo": "node ./run-task.js serve-rojo"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
