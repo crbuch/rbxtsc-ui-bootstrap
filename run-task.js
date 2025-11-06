@@ -9,11 +9,11 @@ const isWindows = platform === "win32";
 
 const commands = {
 	bundle: isWindows
-		? "npx rbxtsc && ./bin/wax.exe bundle input=./default.project.json output=./bundle/out/bundle.client.luau minify=true"
+		? "npx rbxtsc && .\\bin\\wax.exe bundle input=.\\default.project.json output=.\\bundle\\out\\bundle.client.luau minify=true"
 		: "npx rbxtsc && wine ./bin/wax.exe bundle input=./default.project.json output=./bundle/out/bundle.client.luau minify=true",
 
 	"serve-rojo": isWindows
-		? "./bin/rojo.exe serve ./bundle --address 0.0.0.0"
+		? ".\\bin\\rojo.exe serve .\\bundle --address 0.0.0.0"
 		: "wine ./bin/rojo.exe serve ./bundle --address 0.0.0.0",
 };
 
